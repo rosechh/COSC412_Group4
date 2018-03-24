@@ -1,12 +1,27 @@
 /*
 	[Table of contents]
 
+	+COSC412 Custom Additions
+	- Greg's Additions
+	-
+	-
+	-
+	-
 	+ Navigation Menu
 	- Navigation Menu > 991 RES
 	- Navigation Menu Switch < 991 RES
 	- Mega Dropdown Menu
 	
 */
+
+/* + COSC412 Custom Additions */
+
+/* - Greg's Additions */
+.scaled-logo {
+	transform: scale(0.5);
+	position: relative;
+	bottom: 75px;
+}
 
 /* + Navigation Menu */
 .ow-navigation.navbar  {
