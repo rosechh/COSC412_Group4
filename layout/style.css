@@ -12,6 +12,14 @@
 /* ========================================================================== */
 
 /*	
+	+COSC412 Custom Settings
+		-Greg's Settings
+		-
+		-
+		-
+		-
+		-
+		-
 	+ Global
 		- Padding/Margin
 		
@@ -42,6 +50,36 @@
 		- max-width: 639
 		- max-width: 479
 */
+
+/*+ COSC412 Custom Settings
+
+	/* -Greg's Settings */
+	
+.direct_list_hdr {
+	font-family:'Libre Bakerville', serif;
+	font-size: 18px;
+	color:#000;
+	margin-right: 5px;
+	text-decoration: none;
+}
+
+.direct_list_hdr a{
+	color: inherit;
+	text-decoration: inherit;
+	font-weight: bold;
+}
+
+.direct_list_hdr a:hover{
+	color: #444;
+	text-decoration: inherit;
+}
+
+.park_info {
+	font-family:'Libre Bakerville', serif;
+	font-size: 14px;
+	color:#333;
+	text-align: right;
+}
 
 /* ## Global */
 
