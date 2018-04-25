@@ -19,14 +19,20 @@
 	<script>
 		function initMap(){
 			var options = {
-				zoom:4,
-				center:{lat:44.4280,lng:-110.5885}
+				zoom:5,
+				center:{lat:39.8283,lng:-98.5795}
 			}
 			//New Map
 			var map = new google.maps.Map(document.getElementById('map'), options);
 			
-			//Listen for click on map
+			//Listen for click on map : zoom out
 			google.maps.event.addListener(map, 'click', 
+			function(event){
+				map.setZoom(5);
+				map.setCenter({lat:39.8283,lng:-98.5795})
+			});
+			//Listen for right click on map : drop a marker
+			google.maps.event.addListener(map, 'rightclick', 
 			function(event){
 				//Add marker
 				addMarker({coords:event.latLng});
@@ -48,7 +54,7 @@
 				},
 				{
 				coords:{lat:44.427895,lng:-110.588379},
-				content:'<h2>Yellow Stone, WY</h2>'
+				content:'<h2>Yellow Stone, WY</h2><br><button type="submit" value="Submit">Press</button>'
 				},
 				{
 				coords:{lat:40.720585,lng:-77.826965},
@@ -76,33 +82,56 @@
 			/*If using custom icons example...
 			addMarker({
 				coords:{lat:?,lng:?},
-				iconImage:'[URL or IMAGE PATH]'
+				iconImage:'/images/activity-icon1.png'
 			});
 			*/
 			
 			//Add Marker Function
 			function addMarker(props){
+				var image = {
+				url:'/images/activity-icon1.png'
+				}
+			
 				var markOps = {
 				position:props.coords,
-				map:map
+				map:map,
+				icon:image,
+				animation: google.maps.Animation.DROP,
+				title:"Click to zoom"
 				}
 			
 				/*Check for custom icon
 				if(props.iconImage){
 					marker.setIcon(props.iconImage);
-				}
-				*/
+				}*/
 				
 				//New Marker
 				var marker = new google.maps.Marker(markOps);
 		
+				marker.addListener('mouseover',
+				function() {
+					if (marker.getAnimation() !== null){
+						marker.setAnimation(null);
+					} 
+					else {
+						marker.setAnimation(google.maps.Animation.BOUNCE);
+					}
+				});
+				
+				marker.addListener('click',
+				function(){
+					map.setZoom(9);
+					map.setCenter(marker.getPosition());
+				});
+				
 				//Check Content
 				if (props.content){
 					var infoWindow = new google.maps.InfoWindow({
 						content:props.content
 					});
 					
-					marker.addListener('click', function(){
+					marker.addListener('dblclick', 
+					function(){
 						infoWindow.open(map, marker);
 					});
 				}
