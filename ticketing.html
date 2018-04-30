@@ -88,14 +88,17 @@
 									</ul>
 								</li>
 								<li><a href="directory.html" title="directory">Directory</a></li>
-								<li><a href="ticketing.html" title="ticketing">ticketing</a></li>
+								 <li class="active dropdown">
+									<a href="ticketing.html" title="ticketing" class="dropdown-toggle" role= "button" aria-haspopup="true" aria-haspopup="false">ticketing</a>
+									<i class="ddl-switch fa fa-angle-down"></i>
+									<ul class="dropdown-menu"></ul>
+								</li> 
 								<li><a href="gallery.html" title="Gallery">Gallery</a></li>
 								<li class="dropdown">
 									<a href="#" title="Donations" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Donations</a>
 									<i class="ddl-switch fa fa-angle-down"></i>
 									<ul class="dropdown-menu">
 										<li><a href="donations.html" title="Donations">Donations</a></li>
-	
 										<li><a href="cart.html" title="Cart">cart</a></li>
 										<li><a href="checkout.html" title="Checkout">checkout</a></li>
 
@@ -144,31 +147,47 @@
                                 <div class="section-header section-header2">
                                     <h3>How To Book your Tickets</h3>
                                     <h6>Process</h6>
-                                </div><!-- Section Header /- -->
+								</div><!-- Section Header /- -->
                                 <!-- Row -->
-                                <div class="row process-container">
-                                    <div class="col-md-4 col-sm-6 col-xs-6 process-box">
+                                 <div class="row process-container">
+                                    <div class="col-md-4 col-sm-6 col-xs-6 process-box">						
                                         <span></span>
                                         <div class="process-content">
-                                            <span><i class="icon icon-WineGlass"></i></span>
-                                            <h6>1. Choose your State</h6>
+											<span><i class="icon icon-WineGlass"></i></span>
+											<h6> Choose your State
+											<div class=  "Choose your State">
+												<select>
+													<option>Maryland</option>
+													<option>Arizona</option>
+													<option>Tennessee</option>
+												</select>
+											</div>
+										</h6>
                                         </div>
                                     </div>
                                     <div class="col-md-4 col-sm-6 col-xs-6 process-box">
                                         <span></span>
                                         <div class="process-content">
                                             <span><i class="icon icon-Pointer"></i></span>
-                                            <h6>2. Find your Park</h6>
+											<!-- <h6> Find your Park</h6> -->
+											<h6> Find your park <div class = "Find your park">
+												<select>
+													<option>Sandy Point Park</option>
+													<option> Grand Canyon </option>
+													<option> Great Smokey Mountain </option>
+												</select>
+											</div>
+										</h6>
                                         </div>
                                     </div>
                                     <div class="col-md-4 col-sm-6 col-xs-6 process-box">
                                         <span></span>
                                         <div class="process-content">
                                             <span><i class="icon icon-Icecream1"></i></span>
-                                            <h6>3. Checkout </h6>
-                                        </div>
+											<h6> <a href="cart.html"> Checkout </a></h6>  								
+                                        </div> 
                                     </div>
-                                </div><!-- Row /- -->
+                                </div> <!-- Row /- -->
                             </div><!-- Container /- -->
                         </div><!-- Process Section /- -->
 			<!-- Destination Section -->
@@ -186,12 +205,11 @@
 						<!-- Destination Box -->
 						<div class="col-md-4 col-sm-6 col-xs-6 destination-box">
 							<div class="destination-content">
-								<img src="images/YellowStone.jpeg" alt="Destination" />
-								<h3><span>YellowStone National Park</span></h3>
+								<img src="images/yellow-stone.jpg" alt="Destination" />
+								<h3><span>YellowStone National Park </span></h3>
 								<div class="destination-content-box">
-									<h4>YellowStone Park Travel<br> </h4>
+									<h4> YellowStone National Park<br> </h4>
 									<h5>Event : <span> West entrance Opening</span></h5>
-									<!-- <h2> <sub>$2500</sub><span>Per Person</span></h2> -->
 									<span>
 										<i class="fa fa-star"></i>
 										<i class="fa fa-star"></i>
@@ -199,24 +217,22 @@
 										<i class="fa fa-star"></i>
 										<i class="fa fa-star-o"></i>
 									</span>
-									<ul>
+									<!-- <ul>
 										<li><a href="#"><i class="fa fa-plane"></i></a></li>
 										<li><a href="#"><i class="fa fa-bus"></i></a></li>
 										<li><a href="#"><i class="fa fa-male"></i></a></li>
-										<li><a href="#"><i class="fa fa-ship"></i></a></li>
-									</ul>
+									</ul> -->
 								</div>
 							</div>
 						</div><!-- Destination Box /- -->
 						<!-- Destination Box -->
 						<div class="col-md-4 col-sm-6 col-xs-6 destination-box">
 							<div class="destination-content">
-								<img src="images/yosemite.jpg" alt="Destination" />
-								<h3><span>Yosemite National Park</span></h3>
+								<img src="images/greatsmokeymountains.jpg" alt="Destination" />
+								<h3><span>Great Smokey Mountains</span></h3>
 								<div class="destination-content-box">
-									<h4>Yosemite National Travel<br> </h4>
+									<h4>Great Smokey Mountains Travel<br> </h4>
 									<h5>Event : <span> Season Opening</span></h5>
-									<!-- <h2>$1999 <sub>$2500</sub><span>Per Person</span></h2> -->
 									<span>
 										<i class="fa fa-star"></i>
 										<i class="fa fa-star"></i>
@@ -224,24 +240,22 @@
 										<i class="fa fa-star"></i>
 										<i class="fa fa-star"></i>
 									</span>
-									<ul>
+									<!-- <ul>
 										<li><a href="#"><i class="fa fa-plane"></i></a></li>
 										<li><a href="#"><i class="fa fa-bus"></i></a></li>
 										<li><a href="#"><i class="fa fa-male"></i></a></li>
-										<li><a href="#"><i class="fa fa-ship"></i></a></li>
-									</ul>
+									</ul> --> 
 								</div>
 							</div>
 						</div><!-- Destination Box /- -->
 						<!-- Destination Box -->
 						<div class="col-md-4 col-sm-6 col-xs-6 destination-box">
 							<div class="destination-content">
-								<img src="images/grandcanyon.jpeg" alt="Destination" />
+								<img src="images/grandcanyon.jpg" alt="Destination" />
 								<h3><span>Grand Canyon</span></h3>
 								<div class="destination-content-box">
-									<h4>Grand Canyon Travel<br> </h4>
+									<h4> Grand Canyon Travel<br> </h4>
 									<h5>Event : <span>Season Opening</span></h5>
-									<!-- <h2>$1999 <sub>$2500</sub><span>Per Person</span></h2> -->
 									<span>
 										<i class="fa fa-star"></i>
 										<i class="fa fa-star"></i>
@@ -249,12 +263,11 @@
 										<i class="fa fa-star"></i>
 										<i class="fa fa-star"></i>
 									</span>
-									<ul>
+									<!-- <ul>
 										<li><a href="#"><i class="fa fa-plane"></i></a></li>
 										<li><a href="#"><i class="fa fa-bus"></i></a></li>
 										<li><a href="#"><i class="fa fa-male"></i></a></li>
-										<li><a href="#"><i class="fa fa-ship"></i></a></li>
-									</ul>
+									</ul> -->
 								</div>
 							</div>
 						</div><!-- Destination Box /- -->								
@@ -267,6 +280,8 @@
 		</main>	
 			
 	</div>
+	<!-- JS for storing options chosen by User-->
+	<script src="StoreOption.js"></script>
 
 	<!-- JQuery v1.12.4 -->
 	<script src="js/jquery-1.12.4.min.js"></script>
