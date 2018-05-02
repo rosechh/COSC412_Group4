@@ -45,7 +45,7 @@
 			}
 			#map {
 				width:95%;
-				height:450px;
+				height:500px;
 				margin:auto;
 			}
 		</style>
@@ -141,18 +141,146 @@
 						</ol>
 					</div>
 				</div><!-- Page Header /- -->
-				<ul><a href="directory_list.html" title="Temporary Link for the Directory List Page">DIRECTORY LIST</a></ul>
-				<form id="mapsearch"><input type="text" class="form-control" placeholder="Enter a start location or select one on the map... " /></form>
 				<!-- Map Code -->
 				<div id="map"></div>
 				<script>
-					function initMap(){
-						var options = {
-							zoom:8,
-							center:{lat:44.4280,lng:-110.5885}
+					var map;
+					//Example content --- to be added to database and called as such
+					var markers = [
+						{
+						coords:{lat:39.4015,lng:-76.6019},
+						content:'<h2>Towson, MD</h2>'
+						},
+						{
+						coords:{lat:37.230873,lng:-108.461838},
+						content:'<h2>Mesa Verde, CO</h2>'
+						},
+						{
+						coords:{lat:29.610300,lng:-94.449081},
+						content:'<h2>Anahuac Wildlife Refuge, Anahuac, TX</h2>'
+						},
+						{
+						coords:{lat:44.427895,lng:-110.588379},
+						content:'<h2>Yellow Stone, WY</h2><br><button type="submit" value="Submit">Press</button>'
+						},
+						{
+						coords:{lat:40.720585,lng:-77.826965},
+						content:'<h2>Rothrock State Forest, State College, PA</h2>'
+						},
+						{
+						coords:{lat:37.317207,lng:-113.022537},
+						content:'<h2>Zion, UT</h2>'
+						},
+						{
+						coords:{lat:37.865101,lng:-119.538330},
+						content:'<h2>Yosemite, CA</h2>'
+						},
+						{
+						coords:{lat:38.235195,lng:-120.066483},
+						content:'<h2>Stanislaus, Camp Connell, CA</h2>'
 						}
-						var map = new google.maps.Map(document.getElementById('map'), options)
+					];
+					//May delete this later --- in use by broken function
+					var userMarkers = [];
+				
+					//Basic map initalization
+					function initMap(){
+						//Initial Map options
+						var options = {
+							zoom:5,
+							center:{lat:39.8283,lng:-98.5795}
+						}
+						
+						//New Map
+						map = new google.maps.Map(document.getElementById('map'), options);
+						
+						//Listen for click on map --- zoom out and center
+						google.maps.event.addListener(map, 'click', 
+						function(event){
+							map.setZoom(5);
+							map.setCenter({lat:39.8283,lng:-98.5795})
+						});
+						
+						//Listen for right click on map --- drop a marker
+						google.maps.event.addListener(map, 'rightclick', 
+						function(event){
+							addMarker({coords:event.latLng});
+						});
+						
+						//Loop through initial markers
+						for(var i = 0; i < markers.length; i++){
+							addMarker(markers[i]);
+						}
 					}
+					
+					//Add Marker Function
+					function addMarker(props){
+						/*var image = {
+						url:'/images/activity-icon1.png'
+						}*/
+						
+						//Variable to contain marker options
+						var markOps = {
+						position:props.coords,
+						map:map,
+						//icon:image,
+						animation: google.maps.Animation.DROP,
+						title:"Click to zoom"
+						}
+						
+						//New Marker
+						var marker = new google.maps.Marker(markOps);
+						//Adds new marker to user marker array
+						userMarkers.push(marker);
+						
+						//Checks for content --- adds content to info window and listener to activate info window
+						if (props.content){
+							var infoWindow = new google.maps.InfoWindow({
+								content:props.content
+							});
+								
+							//Listen for double click IF a content window exists	
+							marker.addListener('dblclick', 
+							function(){
+								infoWindow.open(map, marker);
+							});
+						}
+					
+						//Listen for mouse over --- Bounce animation
+						marker.addListener('mouseover',
+						function() {
+							marker.setAnimation(google.maps.Animation.BOUNCE);
+						});
+							
+						//Listen for mouse out from marker --- End animation	
+						marker.addListener('mouseout',
+						function() {
+							marker.setAnimation(null);
+						});
+							
+						//Listen for mouse click --- Zoom into clicked location	
+						marker.addListener('click',
+						function(){
+							map.setZoom(9);
+							map.setCenter(marker.getPosition());
+						});
+					}
+					
+					// It's broken >:(
+					function removeMarkers(){
+						for (i = 0; i < userMarkers.length; i++){
+							userMarkers[i].setMap(null);
+						}
+						userMarkers = [];
+					}
+					
+					//Checks if a variable exists in an array	
+					function inArray(needle, haystack) {
+						for(var i = 0; i < haystack.length; i++){
+							if (haystack[i]===needle){return true};
+						}
+						return false;
+		}
 				</script>
 			</main>
 		</div>

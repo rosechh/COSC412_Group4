@@ -15,98 +15,142 @@
 </head>
 <body>
 	<h1>My Google Map</h1>
+	<div id="floating-map-panel">
+		<input onclick="removeMarkers();" type=button value="Remove Markers">
+	</div>
 	<div id="map"></div>
 	<script>
-		function initMap(){
-			var options = {
-				zoom:4,
-				center:{lat:44.4280,lng:-110.5885}
+	
+		var map;
+		var markers = [
+			{
+			coords:{lat:39.4015,lng:-76.6019},
+			content:'<h2>Towson, MD</h2>'
+			},
+			{
+			coords:{lat:37.230873,lng:-108.461838},
+			content:'<h2>Mesa Verde, CO</h2>'
+			},
+			{
+			coords:{lat:29.610300,lng:-94.449081},
+			content:'<h2>Anahuac Wildlife Refuge, Anahuac, TX</h2>'
+			},
+			{
+			coords:{lat:44.427895,lng:-110.588379},
+			content:'<h2>Yellow Stone, WY</h2><br><button type="submit" value="Submit">Press</button>'
+			},
+			{
+			coords:{lat:40.720585,lng:-77.826965},
+			content:'<h2>Rothrock State Forest, State College, PA</h2>'
+			},
+			{
+			coords:{lat:37.317207,lng:-113.022537},
+			content:'<h2>Zion, UT</h2>'
+			},
+			{
+			coords:{lat:37.865101,lng:-119.538330},
+			content:'<h2>Yosemite, CA</h2>'
+			},
+			{
+			coords:{lat:38.235195,lng:-120.066483},
+			content:'<h2>Stanislaus, Camp Connell, CA</h2>'
 			}
-			//New Map
-			var map = new google.maps.Map(document.getElementById('map'), options);
+		];
+		var userMarkers = [];
+	
+		function initMap(){
+			//Initial Map options
+			var options = {
+				zoom:5,
+				center:{lat:39.8283,lng:-98.5795}
+			}
 			
-			//Listen for click on map
+			//New Map
+			map = new google.maps.Map(document.getElementById('map'), options);
+			
+			//Listen for click on map --- zoom out and center
 			google.maps.event.addListener(map, 'click', 
 			function(event){
-				//Add marker
+				map.setZoom(5);
+				map.setCenter({lat:39.8283,lng:-98.5795})
+			});
+			
+			//Listen for right click on map --- drop a marker
+			google.maps.event.addListener(map, 'rightclick', 
+			function(event){
 				addMarker({coords:event.latLng});
 			});
 			
-			//Array of Markers
-			var markers = [
-				{
-				coords:{lat:39.4015,lng:-76.6019},
-				content:'<h2>Towson, MD</h2>'
-				},
-				{
-				coords:{lat:37.230873,lng:-108.461838},
-				content:'<h2>Mesa Verde, CO</h2>'
-				},
-				{
-				coords:{lat:29.610300,lng:-94.449081},
-				content:'<h2>Anahuac Wildlife Refuge, Anahuac, TX</h2>'
-				},
-				{
-				coords:{lat:44.427895,lng:-110.588379},
-				content:'<h2>Yellow Stone, WY</h2>'
-				},
-				{
-				coords:{lat:40.720585,lng:-77.826965},
-				content:'<h2>Rothrock State Forest, State College, PA</h2>'
-				},
-				{
-				coords:{lat:37.317207,lng:-113.022537},
-				content:'<h2>Zion, UT</h2>'
-				},
-				{
-				coords:{lat:37.865101,lng:-119.538330},
-				content:'<h2>Yosemite, CA</h2>'
-				},
-				{
-				coords:{lat:38.235195,lng:-120.066483},
-				content:'<h2>Stanislaus, Camp Connell, CA</h2>'
-				}
-			];
-			
-			//Loop through markers
+			//Loop through initial markers
 			for(var i = 0; i < markers.length; i++){
 				addMarker(markers[i]);
 			}
-			
-			/*If using custom icons example...
-			addMarker({
-				coords:{lat:?,lng:?},
-				iconImage:'[URL or IMAGE PATH]'
-			});
-			*/
-			
-			//Add Marker Function
-			function addMarker(props){
-				var markOps = {
-				position:props.coords,
-				map:map
-				}
-			
-				/*Check for custom icon
-				if(props.iconImage){
-					marker.setIcon(props.iconImage);
-				}
-				*/
-				
-				//New Marker
-				var marker = new google.maps.Marker(markOps);
+		}
 		
-				//Check Content
-				if (props.content){
-					var infoWindow = new google.maps.InfoWindow({
-						content:props.content
-					});
-					
-					marker.addListener('click', function(){
-						infoWindow.open(map, marker);
-					});
-				}
+		//Add Marker Function
+		function addMarker(props){
+			/*var image = {
+			url:'/images/activity-icon1.png'
+			}*/
+		
+			var markOps = {
+			position:props.coords,
+			map:map,
+			//icon:image,
+			animation: google.maps.Animation.DROP,
+			title:"Click to zoom"
 			}
+			
+			//New Marker
+			var marker = new google.maps.Marker(markOps);
+			userMarkers.push(marker);
+			
+			//Check Content
+			if (props.content){
+				var infoWindow = new google.maps.InfoWindow({
+					content:props.content
+				});
+					
+				//Listen for double click IF a content window exists	
+				marker.addListener('dblclick', 
+				function(){
+					infoWindow.open(map, marker);
+				});
+			}
+		
+			//Listen for mouse over --- Bounce animation
+			marker.addListener('mouseover',
+			function() {
+				marker.setAnimation(google.maps.Animation.BOUNCE);
+			});
+				
+			//Listen for mouse out from marker -- End animation	
+			marker.addListener('mouseout',
+			function() {
+				marker.setAnimation(null);
+			});
+				
+			//Listen for mouse click -- Zoom into clicked location	
+			marker.addListener('click',
+			function(){
+				map.setZoom(9);
+				map.setCenter(marker.getPosition());
+			});
+		}
+		
+		// >:(
+		function removeMarkers(){
+			for (i = 0; i < userMarkers.length; i++){
+				userMarkers[i].setMap(null);
+			}
+			userMarkers = [];
+		}
+				
+		function inArray(needle, haystack) {
+			for(var i = 0; i < haystack.length; i++){
+				if (haystack[i]===needle){return true};
+			}
+			return false;
 		}
 	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key= AIzaSyACZgYoL2PqZtq1dIg6ah1XcxvaqwwOUbA&callback=initMap" async defer></script>
