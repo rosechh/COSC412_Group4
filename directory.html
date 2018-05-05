@@ -38,15 +38,37 @@
 		<link rel="stylesheet" type="text/css" href="css/shortcode.css">
 		<link rel="stylesheet" type="text/css" href="style.css">
 	    <style>
-	    		#mapsearch{
+	    		#mapsearch {
 				width:94%;
 				margin:auto;
 				padding-bottom:5px;
 			}
 			#map {
 				width:95%;
-				height:500px;
+				height:38vw;
 				margin:auto;
+			}
+			#content {
+				height:20vw;
+				width:30vw;
+				overflow-y:auto;
+				overflow-x:hidden;
+				margin:auto;
+			}
+			#content-center {
+				text-align:center;
+				margin:auto;
+			}
+			#iw-image {
+				height:15vw;
+				width:23vw;
+				margin-left:auto;
+				margin-right:auto;
+			}
+			#button-size {
+				padding-top:10%;
+				width:80%;
+				height:2vw;
 			}
 		</style>
 	</head>
@@ -149,35 +171,103 @@
 					var markers = [
 						{
 						coords:{lat:39.4015,lng:-76.6019},
-						content:'<h2>Towson, MD</h2>'
+						content:'<div id="content">'+
+							'<div id="content-center">'+
+							'<h2>Towson, MD</h2>'+
+							'<img id="iw-image" src="images/towson.jpg">'+
+							'</div>'+
+							'</div>'
 						},
 						{
 						coords:{lat:37.230873,lng:-108.461838},
-						content:'<h2>Mesa Verde, CO</h2>'
+						content:'<div id="content">'+
+							'<div id="content-center">'+
+							'<h2>Mesa Verde, CO</h2>'+
+							'<img id="iw-image" src="images/mesa-verde.jpg">'+
+							'</div>'+
+							'</div>'
 						},
 						{
 						coords:{lat:29.610300,lng:-94.449081},
-						content:'<h2>Anahuac Wildlife Refuge, Anahuac, TX</h2>'
+						content:'<div id="content">'+
+							'<div id="content-center">'+
+							'<h2>Anahuac Wildlife Refuge, Anahuac, TX</h2>'+
+							'<img id="iw-image" src="images/anahuac-refuge.jpg">'+
+							'</div>'+
+							'</div>'
 						},
 						{
 						coords:{lat:44.427895,lng:-110.588379},
-						content:'<h2>Yellow Stone, WY</h2><br><button type="submit" value="Submit">Press</button>'
+						content:'<div id="content">'+
+							'<div id="content-center">'+
+							'<h2>Yellow Stone, WY</h2>'+
+							'<img id="iw-image" src="images/yellow-stone.jpg">'+
+							//'<button id="button-size" type="submit" value="Submit">Press</button>'+
+							'</div>'+
+							'</div>'
 						},
 						{
 						coords:{lat:40.720585,lng:-77.826965},
-						content:'<h2>Rothrock State Forest, State College, PA</h2>'
+						content:'<div id="content">'+
+							'<div id="content-center">'+
+							'<h2>Rothrock State Forest, State College, PA</h2>'+
+							'<img id="iw-image" src="images/rothrock-state.jpg">'+
+							'</div>'+
+							'</div>'
 						},
 						{
 						coords:{lat:37.317207,lng:-113.022537},
-						content:'<h2>Zion, UT</h2>'
+						content:'<div id="content">'+
+							'<div id="content-center">'+
+							'<h2>Zion, UT</h2>'+
+							'<img id="iw-image" src="images/zion.jpg">'+
+							'</div>'+
+							'</div>'
 						},
 						{
 						coords:{lat:37.865101,lng:-119.538330},
-						content:'<h2>Yosemite, CA</h2>'
+						content:'<div id="content">'+
+							'<div id="content-center">'+
+							'<h2>Yosemite, CA</h2>'+
+							'<img id="iw-image" src="images/yosemite-mt.jpg">'+
+							'</div>'+
+							'</div>'
 						},
 						{
 						coords:{lat:38.235195,lng:-120.066483},
-						content:'<h2>Stanislaus, Camp Connell, CA</h2>'
+						content:'<div id="content">'+
+							'<div id="content-center">'+
+							'<h2>Stanislaus, Camp Connell, CA</h2>'+
+							'<img id="iw-image" src="images/camp-connell.jpg">'+
+							'</div>'+
+							'</div>'
+						},
+						{
+						coords:{lat:39.0145,lng:-76.3999},
+						content:'<div id="content">'+
+							'<div id="content-center">'+
+							'<h2>Sandy Point State Park, MD</h2>'+
+							'<img id="iw-image" src="images/sandy-point.jpg">'+
+							'</div>'+
+							'</div>'
+						},
+						{
+						coords:{lat:36.1070,lng:-112.1130},
+						content:'<div id="content">'+
+							'<div id="content-center">'+
+							'<h2>Grand Canyon National Park, AZ</h2>'+
+							'<img id="iw-image" src="images/grandcanyon.jpg">'+
+							'</div>'+
+							'</div>'
+						},
+						{
+						coords:{lat:35.6532,lng:-83.5070},
+						content:'<div id="content">'+
+							'<div id="content-center">'+
+							'<h2>Great Smokey Mountains, TN</h2>'+
+							'<img id="iw-image" src="images/greatsmokeymountains.jpg">'+
+							'</div>'+
+							'</div>'
 						}
 					];
 					//May delete this later --- in use by broken function
@@ -187,7 +277,7 @@
 					function initMap(){
 						//Initial Map options
 						var options = {
-							zoom:5,
+							zoom:4.8,
 							center:{lat:39.8283,lng:-98.5795}
 						}
 						
@@ -197,7 +287,7 @@
 						//Listen for click on map --- zoom out and center
 						google.maps.event.addListener(map, 'click', 
 						function(event){
-							map.setZoom(5);
+							map.setZoom(4.8);
 							map.setCenter({lat:39.8283,lng:-98.5795})
 						});
 						
