@@ -210,7 +210,7 @@
 					//**************************************************************
 					//***============SECONDARY FUNCTION - ADD MARKERS============***	
 					//**************************************************************
-					//Add Marker Function
+
 					function addMarker(props){
 						
 						//**************************
@@ -241,28 +241,21 @@
 						//Create New Marker
 						var marker = new google.maps.Marker(markOps);
 
-						if (props.markType === 'state') { 
-							stateMarkers.push(marker); 
-						}
-						else {
-							marker.setMap(null); 
-							parkMarkers.push(marker);
-						}
-
 						if (props.title) {
 							marker.setTitle(props.title);
 						} 
 						
 						if (props.content) {
 							var infoWindow = new google.maps.InfoWindow({content:props.content});
+
 						}
 
 						//********************************
 						//***//Marker Event Listeners\\***
 						//********************************
 
-						//Listen for double click --- Open Infow Window	
-						marker.addListener('dblclick', 
+						//Listen for double click --- Open Info Window	
+						marker.addListener('rightclick', 
 						function(){
 							infoWindow.open(map, marker);
 						});
@@ -292,12 +285,26 @@
 							clearMarkers(stateMarkers);
 							showMarkersIf(parkMarkers, marker.sid);
 						});
+
+						//********************************
+						//***//Seperate Marker Types\\***
+						//********************************
+
+						if (props.markType === 'state') { 
+							stateMarkers.push(marker); 
+						}
+						else {
+							marker.setMap(null); 
+							parkMarkers.push(marker);
+						}
+
 					}
 
 
 					//**************************************************************
 					//***==================SUPPORTING FUNCTIONS==================***	
 					//**************************************************************
+					
 					function initMarkers(contentArray){
 						for(var i = 0; i < contentArray.length; i++){
 							addMarker(contentArray[i]);
