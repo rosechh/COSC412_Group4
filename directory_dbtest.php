@@ -58,6 +58,7 @@ mysqli_close($con);
 <script type="text/javascript">
 var name =  <?php echo $name;  ?>
 document.write(name);
+//This doesn't work :[
 </script>
 </body>
 </html> 
