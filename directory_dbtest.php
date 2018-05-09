@@ -27,7 +27,7 @@ if (!$con) {
     die('Could not connect: ' . mysqli_error($con));
 }
 
-$sql="SELECT * FROM parks WHERE state = 'CO'";
+$sql="SELECT * FROM nParks";
 $result = mysqli_query($con,$sql);
 
 echo "<table>
@@ -36,6 +36,7 @@ echo "<table>
 <th>State</th>
 <th>Latitude</th>
 <th>Longitude</th>
+<th>Image</th>
 <th>Content</th>
 </tr>";
 while($row = mysqli_fetch_array($result)) {
@@ -44,11 +45,19 @@ while($row = mysqli_fetch_array($result)) {
     echo "<td>" . $row['state'] . "</td>";
     echo "<td>" . $row['lat'] . "</td>";
     echo "<td>" . $row['lng'] . "</td>";
+    echo "<td>" . $row['image'] . "</td>";
     echo "<td>" . $row['content'] . "</td>";
     echo "</tr>";
+
+    $name = $row['name'];
+
 }
 echo "</table>";
 mysqli_close($con);
 ?>
+<script type="text/javascript">
+var name =  <?php echo $name;  ?>
+document.write(name);
+</script>
 </body>
 </html> 
