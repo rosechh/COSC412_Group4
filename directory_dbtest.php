@@ -22,6 +22,8 @@
 //*****************************************************************************************
 //***THIS FILE IS FOR MY LOCAL HOST TESTING ONLY;IT IS NOT MEANT TO WORK FOR ANYONE ELSE***
 //*****************************************************************************************
+/*
+<?php
 $con = mysqli_connect('localhost','gnik','Gpn108017*','natparktest');
 if (!$con) {
     die('Could not connect: ' . mysqli_error($con));
@@ -55,10 +57,14 @@ while($row = mysqli_fetch_array($result)) {
 echo "</table>";
 mysqli_close($con);
 ?>
-<script type="text/javascript">
-var name =  <?php echo $name;  ?>
-document.write(name);
-//This doesn't work :[
-</script>
-</body>
-</html> 
+*/
+<html>
+	<?php 
+		$name='This is a name';
+	?>
+
+	<script type="text/javascript">
+		var name = "<?php echo $name ?>";
+		document.write("TA DA : " + name);
+	</script>
+</html>
