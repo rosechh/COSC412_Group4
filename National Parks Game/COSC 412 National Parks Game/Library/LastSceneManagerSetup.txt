@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/National Park Assets/Scenes/TestCampsite.unity
+- path: Assets/National Park Assets/Scenes/CampsiteScene.unity
   isLoaded: 1
   isActive: 1
