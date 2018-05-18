@@ -287,12 +287,12 @@
 												</thead>
 												<tbody>
 													<tr class="cart_item">
-														<td class="product-name">TREKKING BAGS</td>
-														<td>$439.00</td>
+														<td class="product-name">GRAND CANYON</td>
+														<td>$82.37</td>
 													</tr>
 													<tr class="cart-subtotal">
 														<th>Sub Total</th>
-														<td>$439.00</td>
+														<td>$82.37</td>
 													</tr>
 												</tbody>
 												<tfoot>
@@ -302,7 +302,7 @@
 													</tr>
 													<tr>
 														<th>Total Order</th>
-														<td>$439.00</td>
+														<td>$82.37</td>
 													</tr>
 												</tfoot>
 											</table>
@@ -310,15 +310,23 @@
 										<div class="checkout-payment">
 											<ul>
 												<li>
-													<input type="radio" value="Direct Bank Transfer" checked />
-													<label>Direct Bank Transfer</label>
-													<div class="payment_box">
-														<p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order wont be shipped until the funds have cleared in our account.</p>
-													</div>
+													
 												</li>
 												<li>
-													<input type="radio" value="Paypal" />
-													<label>Paypal <img src="images/paypal.jpg" alt="Paypal" /></label>
+													<input type="radio" value= "Stripe" />
+													<label>STRIPE <img src="images/strip.png" alt="Stripe" /></label>
+													<form action="your-server-side-code"
+													method="POST"><script
+													src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+													data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
+													data-amount="8237"
+													data-name="http://Stripe.com"
+													data-description="National Park Service"
+													data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+													data-locale="auto"
+													data-zip-code="true">
+													</script>
+</form>
 												</li>
 											</ul>
 										</div>
