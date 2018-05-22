@@ -87,6 +87,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\National Park Assets\Scripts\ChangeAvatar.cs" />
+    <Compile Include="Assets\National Park Assets\Scripts\ChangePet.cs" />
     <Compile Include="Assets\National Park Assets\Scripts\Test Scripts\AnimateCamper.cs" />
     <Compile Include="Assets\National Park Assets\Scripts\Test Scripts\ChangeSprite.cs" />
     <Compile Include="Assets\National Park Assets\Scripts\Test Scripts\CycleSprites.cs" />
@@ -95,6 +97,8 @@
     <Compile Include="Assets\National Park Assets\Scripts\Test Scripts\customizationSettings.cs" />
     <Compile Include="Assets\National Park Assets\Scripts\Test Scripts\residenceCustomization.cs" />
     <Compile Include="Assets\National Park Assets\Scripts\Test Scripts\userSettings.cs" />
+    <Compile Include="Assets\National Park Assets\Scripts\UIPosition.cs" />
+    <Compile Include="Assets\National Park Assets\Scripts\UserSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\National Park Assets\Asset References.txt" />

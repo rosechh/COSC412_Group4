@@ -1,0 +1,10 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "Game Build 2.data.unityweb",
+"asmCodeUrl": "Game Build 2.asm.code.unityweb",
+"asmMemoryUrl": "Game Build 2.asm.memory.unityweb",
+"asmFrameworkUrl": "Game Build 2.asm.framework.unityweb",
+"backgroundUrl": "Game Build 2.jpg",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#FFFFFF"
+}
