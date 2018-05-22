@@ -38,7 +38,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 402
+    width: 398
     height: 947
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
@@ -132,10 +132,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 709, y: 492}
-  m_MaxSize: {x: 18004, y: 14042}
+  m_MinSize: {x: 711, y: 492}
+  m_MaxSize: {x: 18006, y: 14042}
   vertical: 0
-  controlID: 47
+  controlID: 120
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -152,14 +152,14 @@ MonoBehaviour:
   - {fileID: 9}
   m_Position:
     serializedVersion: 2
-    x: 402
+    x: 398
     y: 0
-    width: 966
+    width: 970
     height: 947
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 48
+  controlID: 67
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -176,7 +176,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 966
+    width: 970
     height: 503
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
@@ -206,7 +206,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 503
-    width: 966
+    width: 970
     height: 444
   m_MinSize: {x: 234, y: 271}
   m_MaxSize: {x: 10004, y: 10021}
@@ -233,8 +233,8 @@ MonoBehaviour:
     y: 0
     width: 552
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -261,13 +261,13 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 404
+    x: 400
     y: 92
-    width: 962
+    width: 966
     height: 482
   m_ResetOnNextRepaint: 0
   m_IgnoreNextPostprocessEvent: 0
-  m_SelectedAssetPath: Assets/National Park Assets/Sprites/Props/Campfire2.png
+  m_SelectedAssetPath: Assets/National Park Assets/Sprites/Environments/Tree1.png
   m_Selected:
     m_Name: 
     m_OriginalName: 
@@ -304,9 +304,9 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
-    x: 404
+    x: 400
     y: 92
-    width: 962
+    width: 966
     height: 482
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
@@ -336,25 +336,25 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-      width: 962
+      width: 966
       height: 465
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 481, y: 232.5}
+    m_Translation: {x: 483, y: 232.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -481
+      x: -483
       y: -232.5
-      width: 962
+      width: 966
       height: 465
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 962, y: 482}
+  m_LastWindowPixelSize: {x: 966, y: 482}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -380,19 +380,19 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
-    x: 404
+    x: 400
     y: 92
-    width: 962
+    width: 966
     height: 482
   m_SceneLighting: 0
-  lastFramingTime: 935.2934539279739
+  lastFramingTime: 22392.638770634356
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.453193, y: -0.8904367, z: -14.5390625}
+    m_Target: {x: -0.37370038, y: 0.15312412, z: -14.970703}
     speed: 2
-    m_Value: {x: 2.453193, y: -0.8904367, z: -14.5390625}
+    m_Value: {x: -0.37370038, y: 0.15312412, z: -14.970703}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -419,9 +419,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 12.405735
+    m_Target: 10.818005
     speed: 2
-    m_Value: 12.405735
+    m_Value: 10.818005
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -454,10 +454,10 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 249
+    x: 400
     y: 92
-    width: 1299
-    height: 481
+    width: 966
+    height: 482
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -480,23 +480,21 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 404
+    x: 400
     y: 92
-    width: 962
+    width: 966
     height: 482
   m_ViewPositions:
     m_KeySerializationHelper:
     - {fileID: 1107246600479122344, guid: d361e31236509e345a96889ba8955e6a, type: 2}
-    - {fileID: 1107827059833955244, guid: de4e6057e666d68408110b24888564c7, type: 2}
-    - {fileID: 1107941802623166842, guid: 2e723d1e6a03efe4aa2b458661f2e88e, type: 2}
-    - {fileID: 1107687802500946524, guid: 3722874287c146c4c98fc703c99a5408, type: 2}
     - {fileID: 1107075487812894368, guid: 49b18409c38967740a9de7ac1df3b726, type: 2}
+    - {fileID: 1107521830912810250, guid: 022ed0563d711f149885e996ef8e7e52, type: 2}
+    - {fileID: 1107235641700763948, guid: dac0f2f1f88c063449c2508a438fac6f, type: 2}
     m_ValueSerializationHelper:
     - {x: 1344.2002, y: 278.2}
-    - {x: 529.2, y: 196.40002}
-    - {x: 527.2, y: 260.40002}
-    - {x: 527.2, y: 260.40002}
-    - {x: 527.2, y: 260.40002}
+    - {x: 528.60004, y: 280.40002}
+    - {x: 528.60004, y: 356.40002}
+    - {x: 528.60004, y: 300.40002}
   m_PreviewAnimator: {fileID: 0}
   m_AnimatorController: {fileID: 0}
   m_BreadCrumbs: []
@@ -533,9 +531,9 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 404
+    x: 400
     y: 92
-    width: 962
+    width: 966
     height: 482
   m_AnimEditor: {fileID: 0}
   m_Locked: 0
@@ -561,9 +559,9 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 404
+    x: 400
     y: 595
-    width: 962
+    width: 966
     height: 423
   m_SearchFilter:
     m_NameFilter: 
@@ -576,20 +574,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/National Park Assets/Animations
+    - Assets/National Park Assets/Sprites/UI
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/National Park Assets/Animations
+  - Assets/National Park Assets/Sprites/UI
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Andrew Knickman\Documents\TU Spring 2018\COSC 412\National
     Parks Game\COSC 412 National Parks Game
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 1e270000
-    m_LastClickedID: 10014
-    m_ExpandedIDs: 0000000008250000582500005c25000094250000402600001e27000000ca9a3bffffff7f
+    m_SelectedIDs: 68250000
+    m_LastClickedID: 9576
+    m_ExpandedIDs: 00000000082500005c250000842600008a27000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -617,7 +615,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000008250000582500005c25000094250000402600001e270000
+    m_ExpandedIDs: 00000000082500005c25000084260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -644,22 +642,22 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: 941900008c1900009c190000a0190000540000008c000000ce2000006618fdff320000004e00000090000000ba1c0000b41c0000c8000000ec000000ee000000820100003a000000ec38000044000000bc000000bc4e0000d6540000062a00000e2a0000d2290000a2260000d026000000000000502d0000e02600000c2b0000e02e0000
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: 941900008c1900009c190000a0190000540000008c000000ce2000006618fdff320000004e00000090000000ba1c0000b41c0000c8000000ec000000ee000000820100003a000000ec38000044000000bc000000bc4e0000d6540000062a00000e2a0000d2290000a2260000d026000000000000502d0000e02600000c2b0000e02e0000de2600009029000008270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Presentation_PetsIdleSheet
+      m_OriginalName: Presentation_PetsIdleSheet
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 10638
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 9}
     m_CreateAssetUtility:
@@ -696,27 +694,27 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 92
-    width: 400
+    width: 396
     height: 926
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 540dffff
-    m_LastClickedID: 0
-    m_ExpandedIDs: 9290ffffd0fbffff0000000040270000a8270000de270000
+    m_SelectedIDs: 606f0000
+    m_LastClickedID: 28512
+    m_ExpandedIDs: 9e25faffb425faff8626faff98b6fbff8240fcff687efdff04f8ffffd0fbffff000000001828000024280000462800004a2800009c280000c4280000c828000000700000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Camp Pet
-      m_OriginalName: Camp Pet
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: -28526
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 2}
     m_SearchString: 
