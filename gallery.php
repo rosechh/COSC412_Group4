@@ -101,70 +101,70 @@ $conn->close();
 			</div>
 		</div><!-- Loader /- -->
 
-				<!-- Header Section -->
-		<header class="container-fluid no-padding header-section">
-		
-			<!-- SidePanel -->
-			<div id="slidepanel">
-			
-			
-			<div class="container-fluid no-padding menu-block">
-				<!-- Container -->
-				<div class="container">	
-					<!-- nav -->
-					<nav class="navbar navbar-default ow-navigation">
-						<div class="navbar-header">
-							<button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-							<a href="index.html" class="navbar-brand"><img src="images/logo.png" alt="logo" /></a>
-						</div>
-						<div class="navbar-collapse collapse" id="navbar">
-							<ul class="nav navbar-nav">
-								<li class="dropdown">
-									<a href="index.html" title="Home" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
-									<i class="ddl-switch fa fa-angle-down"></i>
-									<ul class="dropdown-menu">				
-									</ul>
-								</li>
-								<li><a href="directory.html" title="directory">Directory</a></li>
-								<li><a href="ticketing.html" title="Ticketing">Tickets</a></li>
-								<li><a href="gallery.html" title="Gallery">Gallery</a></li>
-								<li class="active dropdown">
-									<a href="#" title="Donations" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Donations</a>
-									<i class="ddl-switch fa fa-angle-down"></i>
-									<ul class="dropdown-menu">
-										<li><a href="donations.html" title="Donations">Donations</a></li>
-	
-										<li><a href="cart.html" title="Cart">cart</a></li>
-										<li><a href="checkout.html" title="Checkout">checkout</a></li>
+								<!-- Header Section -->
+<header class="container-fluid no-padding header-section">
 
-									</ul>
-								</li>
-								<li class="dropdown">
-									<a href="blog.html" title="Blog" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Profile</a>
-									<i class="ddl-switch fa fa-angle-down"></i>
-									<ul class="dropdown-menu">
-										<li><a href="login.html" title="Login">Log In</a></li>
-										<li><a href="sign-up.html" title="Sign-Up">Sign Up</a></li>
-									</ul>
-								</li>
-								<li><a href="contactus.html" title="Contact Us">Contact Us</a></li>
-							</ul>
-						</div><!--/.nav-collapse -->
-						<div id="loginpanel" class="desktop-hide">
-							<div class="right" id="toggle">
-								<a id="slideit" href="#slidepanel"><i class="fo-icons fa fa-inbox"></i></a>
-								<a id="closeit" href="#slidepanel"><i class="fo-icons fa fa-close"></i></a>
-							</div>
-						</div>
-					</nav><!-- nav /- -->
-				</div><!-- Container /- -->
-			</div>
-		</header><!-- Header Section /- -->
+<!-- SidePanel -->
+<div id="slidepanel">
+
+
+<div class="container-fluid no-padding menu-block">
+<!-- Container -->
+<div class="container">
+<!-- nav -->
+<nav class="navbar navbar-default ow-navigation">
+<div class="navbar-header">
+<button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="index.php" class="navbar-brand"><img src="images/logo.png" alt="logo" /></a>
+</div>
+<div class="navbar-collapse collapse" id="navbar">
+<ul class="nav navbar-nav">
+<li class="dropdown">
+<a href="index.php" title="Home" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+<i class="ddl-switch fa fa-angle-down"></i>
+<ul class="dropdown-menu">
+</ul>
+</li>
+<li><a href="directory.html" title="directory">Directory</a></li>
+<li><a href="ticketing.html" title="Tickets">Tickets</a></li>
+<li><a href="gallery.php" title="Gallery">Gallery</a></li>
+<li class="active dropdown">
+<a href="#" title="Donations" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Donations</a>
+<i class="ddl-switch fa fa-angle-down"></i>
+<ul class="dropdown-menu">
+<li><a href="donations.html" title="Donations">Donations</a></li>
+
+<li><a href="cart.html" title="Cart">cart</a></li>
+<li><a href="checkout.html" title="Checkout">checkout</a></li>
+
+</ul>
+</li>
+<li class="dropdown">
+<a href="blog.html" title="Blog" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Profile</a>
+<i class="ddl-switch fa fa-angle-down"></i>
+<ul class="dropdown-menu">
+<li><a href="login.php" title="Login">Log In</a></li>
+<li><a href="sign-up.html" title="Sign-Up">Sign Up</a></li>
+</ul>
+</li>
+<li><a href="contactus.html" title="Contact Us">Contact Us</a></li>
+</ul>
+</div><!--/.nav-collapse -->
+<div id="loginpanel" class="desktop-hide">
+<div class="right" id="toggle">
+<a id="slideit" href="#slidepanel"><i class="fo-icons fa fa-inbox"></i></a>
+<a id="closeit" href="#slidepanel"><i class="fo-icons fa fa-close"></i></a>
+</div>
+</div>
+</nav><!-- nav /- -->
+</div><!-- Container /- -->
+</div>
+</header><!-- Header Section /- -->
 	
 		<main>
 			

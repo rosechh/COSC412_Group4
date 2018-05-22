@@ -141,103 +141,70 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 			</div>
 		</div><!-- Loader /- -->
 
-		<!-- Header Section -->
-		<header class="container-fluid no-padding header-section">
-		
-			<!-- SidePanel -->
-			<div id="slidepanel">
-			
-				<!-- Top Header -->
-				<div class="container-fluid no-padding top-header">
-					<!-- Container -->
-					<div class="container">
-						<div class="row">
-							<div class="col-md-6 col-sm-6 col-xs-12 welcome-text">
-								<span><i class="icon icon-Pointer"></i> 123, New street, Chicago</span>
-								<span><a href="tel:+111234567890" title="+(11) 123 456 7890"><i class="icon icon-Phone2"></i>+(11) 123 456 7890</a></span>
-							</div>
-							<div class="col-md-6 col-sm-6 social-block">
-								<div class="search">	
-									<a href="#" id="search" title="Search"><i class="fa fa-search"></i></a>
-								</div>
-								<ul>
-									<li><a href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-									<li><a href="#" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-									<li><a href="#" title="Tumblr"><i class="fa fa-tumblr"></i></a></li>
-									<li><a href="#" title="Vimeo"><i class="fa fa-vimeo"></i></a></li>
-									<li><a href="#" title="Pinterest"><i class="fa fa-pinterest-p"></i></a></li>
-								</ul>
-							</div>							
-						</div>
-						<!-- Search Box -->
-						<div class="search-box">
-							<span><i class="icon_close"></i></span>
-							<form><input type="text" class="form-control" placeholder="Enter a keyword and press enter..." /></form>
-						</div><!-- Search Box /- -->
-					</div><!-- Container /- -->
-				</div><!-- Top Header /- -->				
-			</div><!-- SidePanel /- -->
-			
-			<div class="container-fluid no-padding menu-block">
-				<!-- Container -->
-				<div class="container">	
-					<!-- nav -->
-					<nav class="navbar navbar-default ow-navigation">
-						<div class="navbar-header">
-							<button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-							<a href="index.html" class="navbar-brand"><img src="images/logo.png" alt="logo" /></a>
-						</div>
-						<div class="navbar-collapse collapse" id="navbar">
-							<ul class="nav navbar-nav">
-								<li class="dropdown">
-									<a href="index.html" title="Home" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
-									<i class="ddl-switch fa fa-angle-down"></i>
-									<ul class="dropdown-menu">				
-										<li><a href="index.html" title="homepage">homepage 1</a></li>
-									</ul>
-								</li>
-								<li><a href="about.html" title="About me">About</a></li>
-								<li><a href="services.html" title="Services">Services</a></li>
-								<li><a href="gallery.html" title="Gallery">Gallery</a></li>
-								<li><a href="destination.html" title="Destination">destination</a></li>
-								<li class="active dropdown">
-									<a href="#" title="Pages" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
-									<i class="ddl-switch fa fa-angle-down"></i>
-									<ul class="dropdown-menu">
-										<li><a href="shop.html" title="Shop list">SHOP LIST</a></li>
-										<li><a href="shop-single.html" title="Shop details">shop details</a></li>
-										<li><a href="cart.html" title="Cart">cart</a></li>
-										<li><a href="checkout.html" title="Checkout">checkout</a></li>
-										<li><a href="404.html" title="404">404</a></li>
-									</ul>
-								</li>
-								<li class="dropdown">
-									<a href="blog.html" title="Blog" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
-									<i class="ddl-switch fa fa-angle-down"></i>
-									<ul class="dropdown-menu">
-										<li><a href="blog.html" title="Blog">Blog</a></li>
-										<li><a href="blog-single.html" title="Blog Single">Blog Single</a></li>
-									</ul>
-								</li>
-								<li><a href="contactus.html" title="Contact Us">Contact Us</a></li>
-							</ul>
-						</div><!--/.nav-collapse -->
-						<div id="loginpanel" class="desktop-hide">
-							<div class="right" id="toggle">
-								<a id="slideit" href="#slidepanel"><i class="fo-icons fa fa-inbox"></i></a>
-								<a id="closeit" href="#slidepanel"><i class="fo-icons fa fa-close"></i></a>
-							</div>
-						</div>
-					</nav><!-- nav /- -->
-				</div><!-- Container /- -->
-			</div>
-		</header><!-- Header Section /- -->
+						<!-- Header Section -->
+<header class="container-fluid no-padding header-section">
+
+<!-- SidePanel -->
+<div id="slidepanel">
+
+
+<div class="container-fluid no-padding menu-block">
+<!-- Container -->
+<div class="container">
+<!-- nav -->
+<nav class="navbar navbar-default ow-navigation">
+<div class="navbar-header">
+<button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="index.php" class="navbar-brand"><img src="images/logo.png" alt="logo" /></a>
+</div>
+<div class="navbar-collapse collapse" id="navbar">
+<ul class="nav navbar-nav">
+<li class="dropdown">
+<a href="index.php" title="Home" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+<i class="ddl-switch fa fa-angle-down"></i>
+<ul class="dropdown-menu">
+</ul>
+</li>
+<li><a href="directory.html" title="directory">Directory</a></li>
+<li><a href="ticketing.html" title="Tickets">Tickets</a></li>
+<li><a href="gallery.php" title="Gallery">Gallery</a></li>
+<li class="active dropdown">
+<a href="#" title="Donations" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Donations</a>
+<i class="ddl-switch fa fa-angle-down"></i>
+<ul class="dropdown-menu">
+<li><a href="donations.html" title="Donations">Donations</a></li>
+
+<li><a href="cart.html" title="Cart">cart</a></li>
+<li><a href="checkout.html" title="Checkout">checkout</a></li>
+
+</ul>
+</li>
+<li class="dropdown">
+<a href="blog.html" title="Blog" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Profile</a>
+<i class="ddl-switch fa fa-angle-down"></i>
+<ul class="dropdown-menu">
+<li><a href="login.php" title="Login">Log In</a></li>
+<li><a href="sign-up.html" title="Sign-Up">Sign Up</a></li>
+</ul>
+</li>
+<li><a href="contactus.html" title="Contact Us">Contact Us</a></li>
+</ul>
+</div><!--/.nav-collapse -->
+<div id="loginpanel" class="desktop-hide">
+<div class="right" id="toggle">
+<a id="slideit" href="#slidepanel"><i class="fo-icons fa fa-inbox"></i></a>
+<a id="closeit" href="#slidepanel"><i class="fo-icons fa fa-close"></i></a>
+</div>
+</div>
+</nav><!-- nav /- -->
+</div><!-- Container /- -->
+</div>
+</header><!-- Header Section /- -->
 	
 		<main>
 			
