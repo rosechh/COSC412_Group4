@@ -94,17 +94,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
             //Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
-                //Redirect to login page
-                header("location: login.php"); //change to either UserProfile.php or index2.php
+                //Redirect to 2nd homepage index2.php
+                header("location: index2.php"); 
             } else{
                 echo "Whoops, something went wrong. Please try again later.";
             }
         }
-
         //Close statement
         mysqli_stmt_close($stmt);
     }
-
     //Close connection
     mysqli_close($link);
 

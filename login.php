@@ -120,28 +120,48 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 
 <body data-offset="200" data-spy="scroll" data-target=".ow-navigation">
-	
+
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
-  		var js, fjs = d.getElementsByTagName(s)[0];
-  		if (d.getElementById(id)) return;
-  		js = d.createElement(s); js.id = id;
-  		js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=787868178065057&autoLogAppEvents=1';
-  		fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=787868178065057&autoLogAppEvents=1';
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+	
+	
+	<script>
+  		window.fbAsyncInit = function() {
+    			FB.init({
+      			appId      : '787868178065057',
+      			cookie     : true,
+      			xfbml      : true,
+      			version    : 'v3.0'
+    			});
+      
+    		FB.AppEvents.logPageView();   
+      
+  		};
 
-
-	<div class="main-container">
-		<!-- Loader -->
-		<div id="site-loader" class="load-complete">
-			<div class="loader">
-				<div class="loader-inner ball-clip-rotate">
-					<div></div>
-				</div>
-			</div>
+  		(function(d, s, id){
+     			var js, fjs = d.getElementsByTagName(s)[0];
+     			if (d.getElementById(id)) {return;}
+     			js = d.createElement(s); js.id = id;
+     			js.src = "https://connect.facebook.net/en_US/sdk.js";
+     			fjs.parentNode.insertBefore(js, fjs);
+   		}(document, 'script', 'facebook-jssdk'));
+   		
+   		
+		FB.getLoginStatus(function(response) {
+		    statusChangeCallback(response);
+		});
+	</script>
+	
+	
 		</div><!-- Loader /- -->
 
-						<!-- Header Section -->
+		<!-- Header Section -->
 <header class="container-fluid no-padding header-section">
 
 <!-- SidePanel -->
@@ -189,7 +209,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <i class="ddl-switch fa fa-angle-down"></i>
 <ul class="dropdown-menu">
 <li><a href="login.php" title="Login">Log In</a></li>
-<li><a href="sign-up.html" title="Sign-Up">Sign Up</a></li>
+<li><a href="sign-up.php" title="Sign-Up">Sign Up</a></li>
 </ul>
 </li>
 <li><a href="contactus.html" title="Contact Us">Contact Us</a></li>
@@ -204,7 +224,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </nav><!-- nav /- -->
 </div><!-- Container /- -->
 </div>
-</header><!-- Header Section /- -->
+</header><!-- Header Section /- -->	
+
 	
 		<main>
 			
@@ -231,21 +252,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 								<div class="col-md-12 col-sm-6 col-xs-6 login-form">
 									<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 										<div class="form-group <?php echo(!empty($email_err)) ? 'has-error' : ''; ?>">
-                                            Email Address: <input type="EMAIL" class="form-control" placeholder="Email Address" value="<?php echo $EMAIL; ?>"/>
-                                            <span class="help-block"><?php echo $email_err; ?></span>
+                                            						Email Address: <input type="EMAIL" class="form-control" placeholder="Email Address" value="<?php echo $EMAIL; ?>"/>
+                                            						<span class="help-block"><?php echo $email_err; ?></span>
 										</div>
 										<div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                                            Password: <input type="PASSWORD" class="form-control" placeholder="Password" />
-                                            <span class="help-block"><?php echo $password_err; ?></span>
-                                            <br>
-                                            <input type="submit" value="LOG IN" />
+                                            						Password: <input type="PASSWORD" class="form-control" placeholder="Password" />
+                                            						<span class="help-block"><?php echo $password_err; ?></span>
+                                            						<br>
+                                            						<form>
+												<input type="button" value="Log In" onclick="window.location.href='http://natparkservices.org/UserProfile.html'" />
+											</form>
 										    <a href="#" title="Forgot Password?">Forgot Password?</a>
                                         </div>
-                                        <p>Don't have an account? <a href="sign-up.php">Sign up here.</a>.</p>
+                                        <p>Not registered for an account? <a href="sign-up.html">Sign up here</a>.</p>
                                         <hr><h6 align ="center">OR</h6><hr>
 										<!--Log In Using Facebook -->
 										<!--Facebook login button-->
-										<div class="fb-login-button" data-width="249px" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>										
+										<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false"></div>
+										<meta http-equiv="refresh" content="15;url=http://natparkservices.org/UserProfile.html" />										
                                         
 									</form>
 								</div>
