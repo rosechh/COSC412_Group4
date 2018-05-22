@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 9 ]> <html class="lt_ie9"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class=""><!--<![endif]-->
+<html lang="en" >
 <head>
 	<meta charset="utf-8">
 
@@ -40,6 +38,10 @@
 	<link rel="stylesheet" type="text/css" href="css/navigation-menu.css">
 	<link rel="stylesheet" type="text/css" href="css/shortcode.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
 	
 	<!--[if lt IE 9]>
 		<script src="js/html5/respond.min.js"></script>
@@ -47,8 +49,9 @@
 	
 </head>
 
+
 <body data-offset="200" data-spy="scroll" data-target=".ow-navigation">
-	<div class="main-container">
+		<div class="main-container">
 		<!-- Loader -->
 		<div id="site-loader" class="load-complete">
 			<div class="loader">
@@ -89,7 +92,7 @@
 </li>
 <li><a href="directory.html" title="directory">Directory</a></li>
 <li><a href="tickets.html" title="Tickets">Tickets</a></li>
-<li><a href="gallery.html" title="Gallery">Gallery</a></li>
+<li><a href="gallery.php" title="Gallery">Gallery</a></li>
 <li class="active dropdown">
 <a href="#" title="Donations" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Donations</a>
 <i class="ddl-switch fa fa-angle-down"></i>
@@ -134,170 +137,114 @@
 				</div>
 			</div><!-- Page Header /- -->
 			<div class="padding-80"></div>
-			
-			<!-- Cart -->
-			<div class="woocommerce-cart container-fluid no-left-padding no-right-padding">
-				<!-- Container -->
-				<div class="container">
-					<!-- Row -->
-					<div class="row">
-						<!-- Cart Table -->
-						<div class="col-md-12 col-sm-12 col-xs-12 cart-table">
-							<form>
-								<table class="table table-bordered table-responsive">
-									<thead>
-										<tr>
-											<th class="product-thumbnail">Item</th>
-											<th class="product-name">Product Name</th>
-											<th class="product-quantity">Quantity</th>
-											<th class="product-unit-price">Unit Price</th>
-											<th class="product-subtotal">Total</th>
-											<th class="product-remove">Remove</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr class="cart_item">
-											<td data-title="Item" class="product-thumbnail"><a href="#"><img src="images/product-item.jpg" alt="Product" /></a></td>
-											<td data-title="Product Name" class="product-name"> Grand Canyon <a href="#"></a></td>
 
-											<td data-title="Quantity" class="product-quantity">
-												<div class="prd-quantity" data-title="Quantity">
-													<input value="-" class="qtyminus btn" data-field="quantity1" type="button">
-													<input name="quantity1" value="0" class="qty" type="text">
-													<input value="+" class="qtyplus btn" data-field="quantity1" type="button">
-												</div>
-											</td>
-											<td data-title="Unit Price" class="product-unit-price">$82.37</td>
-											<td data-title="Total" class="product-subtotal">$82.37</td>
-											<td data-title="Remove" class="product-remove"><a href="#"><i class="icon icon-Delete"></i></a></td>
-										</tr>
-										<tr>
-											<td class="action" colspan="6">
-												<a href="#" title="Continue shopping">Continue shopping</a>
-												<a href="#" title="update shopping cart">update shopping cart</a>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</form>
-						</div><!-- Cart Table /- -->						
-						<!-- Coupon -->
-						<div class="col-md-offset-4 col-md-4 col-sm-6 col-xs-6 coupon">
-							<div class="coupon-box">
-								<h4>coupon code</h4>
-								<h6>If You Have A Coupon Code Enter Here</h6>
-								<form>
-									<input type="text" class="form-control" placeholder="Coupon Code" />
-									<input type="submit" value="apply code" />
-								</form>
-							</div>
-						</div><!-- Coupon /- -->
-						<div class="col-md-4 col-sm-6 col-xs-6 cart-collaterals">
-							<div class="cart_totals">
-								<h3>cart totals</h3>
-								<table>
-									<tr>
-										<th>Sub Total</th>
-										<td>$82.37</td>
-									</tr>
-									<tr>
-										<th>Shipping</th>
-										<td>Free</td>
-									</tr>
-									<tr>
-										<th>Grand Total</th>
-										<td>$82.37</td>
-									</tr>
-								</table>
-								<div class="wc-proceed-to-checkout">		
-									<a href="#" class="checkout-button button alt wc-forward">Proceed to Checkout</a>
+  <h1>Shopping Cart</h1>
+
+<div class="shopping-cart">
+
+  <div class="column-labels">
+    <label class="product-image">Image</label>
+    <label class="product-details">Product</label>
+    <label class="product-price">Price</label>
+    <label class="product-quantity">Quantity</label>
+    <label class="product-removal">Remove</label>
+    <label class="product-line-price">Total</label>
+  </div>
+
+  <div class="product">
+    <div class="product-image">
+      <img src="images/grandcanyon.jpg">
+    </div>
+    <div class="product-details">
+      <div class="product-title">Grand Canyon</div>
+      <p class="product-description">A GRAND adventure at the height of life and magnificent nature.</p>
+    </div>
+    <div class="product-price">82.37</div>
+    <div class="product-quantity">
+      <input type="number" value="1" min="1">
+    </div>
+    <div class="product-removal">
+      <button class="remove-product">
+        Remove
+      </button>
+    </div>
+    <div class="product-line-price">82.37</div>
+  </div>
+
+  <div class="product">
+    <div class="product-image">
+      <img src="images/gold.png">
+    </div>
+    <div class="product-details">
+      <div class="product-title">Gold Donation</div>
+      <p class="product-description">A helping hand is a hand we'd like to shake. </p>
+    </div>
+    <div class="product-price">140.00</div>
+    <div class="product-quantity">
+      <input type="number" value="1" min="1">
+    </div>
+    <div class="product-removal">
+      <button class="remove-product">
+        Remove
+      </button>
+    </div>
+    <div class="product-line-price">140.00</div>
+  </div>
+
+  <div class="totals">
+    <div class="totals-item">
+      <label>Subtotal</label>
+      <div class="totals-value" id="cart-subtotal">222.37</div>
+    </div>
+    <div class="totals-item">
+      <label>Tax (6%)</label>
+      <div class="totals-value" id="cart-tax">13.34</div>
+    </div>
+    <div class="totals-item">
+      <label>Shipping</label>
+      <div class="totals-value" id="cart-shipping">0.00</div>
+    </div>
+    <div class="totals-item totals-item-total">
+      <label>Grand Total</label>
+      <div class="totals-value" id="cart-total">235.71</div>
+    </div>
+  </div>
+      <div class="checkout-payment">
+											<ul>
+												<li>
+													
+												</li>
+												<li>
+													
+													<form action="process.html" method="POST">
+  													<script
+												    src="https://checkout.stripe.com/checkout.js"
+												    class="stripe-button"
+												    data-key="pk_test_UJmKAHcgu9V6ZCe0878w3Jp8"
+												    data-image="/square-image.png"
+												    data-name="National Parks Services"
+												    data-description="Grand Canyon & Gold Donation"
+												    data-amount="23571">
+												  </script>
+												</form>
+												</li>
+											</ul>
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-					</div><!-- Row /- -->
-				</div><!-- Container /- -->
-			</div><!-- Cart /- -->
-			
-		</main>
-
-		<!-- Footer Section -->
-		<footer class="footer-main container-fluid no-padding footer-section2">
-			<!-- Container -->
-			<div class="container">
-				<div class="row">
-
-					<!-- Widget Block -->
-					<div class="col-md-4 col-sm-6 col-xs-6 widget-block">
-						<!-- About Widget -->
-						<div class="ftr-widget ftr_widget_about">
-							<h3>about us</h3>
-							<div class="ftr-about-content">
-								<p>Guys like us we had it made. Those were the days. The mate was a mighty sailin' man the Skipper brave and sure. Five passengers.</p>
-								<a href="#" title="Read More">Read More</a>
-							</div>
-						</div><!-- About Widget /- -->
-					</div><!-- Widget Block /- -->
-					
-					<!-- Widget Block -->
-					<div class="col-md-4 col-sm-6 col-xs-6 widget-block">
-						<!-- Latest Post Widget -->
-						<div class="ftr-widget widget_hours">
-							<h3>visiting hours</h3>
-							<p>Monday To Friday : <span>(9.00 am - 5.30 pm)</span></p>
-							<p>Saturday and Sunday : <span>(11.00 am - 2.00 pm)</span></p>
-							<ul>
-								<li><a href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-								<li><a href="#" title="Tumblr"><i class="fa fa-tumblr"></i></a></li>
-								<li><a href="#" title="Vimeo"><i class="fa fa-vimeo"></i></a></li>
-								<li><a href="#" title="Pinterest"><i class="fa fa-pinterest-p"></i></a></li>
-							</ul>
-						</div><!-- Latest Post Widget /- -->
-					</div><!-- Widget Block /- --> 
-					
-					<!-- Widget Block --> 
-					<div class="col-md-4 col-sm-6 col-xs-6 widget-block">
-						<!-- Subscribe Widget -->
-						<div class="ftr-widget ftr_latest_tweet">
-							<h3>latest tweets</h3>
-							<div class="tweet-box">
-								<i class="fa fa-twitter"></i>
-								<p>Travel Advisor Services is a modern, flexible and highly customizable theme for your financialorate.</p>
-								<a href="#">@Traveladviser123</a>
-							</div>
-						</div><!-- Subscribe Widget /- -->
-					</div><!-- Widget Block /- --> 
-					
-					
-					<div class="col-md-12 col-sm-12 col-xs-12">
-						<!-- Widget Instagram -->
-						<div class="ftr-widget ftr_widget_instagram">
-							<ul>
-								<li><a href="#"><img src="images/ftr-insta1.jpg" alt="Instagram" /></a></li>
-								<li><a href="#"><img src="images/ftr-insta2.jpg" alt="Instagram" /></a></li>
-								<li><a href="#"><img src="images/ftr-insta3.jpg" alt="Instagram" /></a></li>
-								<li><a href="#"><img src="images/ftr-insta4.jpg" alt="Instagram" /></a></li>
-								<li><a href="#"><img src="images/ftr-insta5.jpg" alt="Instagram" /></a></li>
-								<li><a href="#"><img src="images/ftr-insta6.jpg" alt="Instagram" /></a></li>
-								<li><a href="#"><img src="images/ftr-insta7.jpg" alt="Instagram" /></a></li>
-								<li><a href="#"><img src="images/ftr-insta8.jpg" alt="Instagram" /></a></li>
-								<li><a href="#"><img src="images/ftr-insta9.jpg" alt="Instagram" /></a></li>
-							</ul>
-						</div><!-- Widget Instagram /- -->
+							</form>
+						</div><!-- Billing /- -->
 					</div>
-					
-				</div>
-			</div><!-- Container /- -->
-			<!-- Footer Bottom -->
-			<div class="container-fluid no-padding btm-ftr">
-				<div class="container">
-					<p>Max Guider <i class="fa fa-copyright"></i> 2016.  All Rights Reserved.</p>
-				</div>
-			</div><!-- Footer Bottom /- -->
-		</footer><!-- Footer Section /- -->
-			
-	</div>
+				</div><!-- Container /- -->
+			</div><!-- Checkout /- -->
+
+
+</div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+  
+
+    <script  src="js/cart.js"></script>
 
 	<!-- JQuery v1.12.4 -->
 	<script src="js/jquery-1.12.4.min.js"></script>
@@ -307,6 +254,8 @@
 
 	<!-- Library - Theme JS -->
 	<script src="js/functions.js"></script>
-	
+
+
 </body>
+
 </html>
